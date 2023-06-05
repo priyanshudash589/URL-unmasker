@@ -1,0 +1,28 @@
+{% extends 'urlunmasker/base.html' %}
+{% load static %}
+
+{% block content %}
+<center>
+    <div id="rnf"
+        class="bg-[#FFFFFF] w-[600px] border-solid border-3 font-bold border-teal-50 flex justify-center items-center  p-20">    
+        The URL which you gave as input is: {{ short_url }}
+    <br><br>
+    "{{ original_url }}" was the original url behind the short URL that you gave as input.
+    <br>
+    Unfortunately there is no such website on the internet :(
+</div>
+
+<img class="object-cover h-28 w-96" src="{% static 'images/error-404.png' %}">
+<br>
+<a href="/">
+<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+    Back to home
+  </button>
+</a>    
+  <br><br>
+  
+  
+
+</center>
+
+{% endblock content %}
